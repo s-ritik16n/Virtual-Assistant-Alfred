@@ -104,9 +104,9 @@ strdt=dt.strftime('%d-%b-%Y')
 logging_file='d:\\logs\\log of '+strdt+'.txt'
 logging.basicConfig(filename=logging_file,level=logging.DEBUG,format='%(asctime)s - %(levelname)s - %(message)s')
 logging.debug('ASSISTANT SESSION STARTED')
-listener='pranav.marathe2014@vit.ac.in'
-talker='pranavmarathe30@gmail.com'
-passw='46409210'
+listener=''
+talker=''
+passw=''
 try:
 	smtpobj= smtplib.SMTP('smtp.gmail.com',587)
 	smtpobj.ehlo()
@@ -115,16 +115,16 @@ except:
 	logging.debug('server login failed')
 while True:
 	print '\nENTER THE EMAIL ADDRESS FOR THE LISTENER EMAIL'
-	#listener=raw_input()
+	listener=raw_input()
 	logging.debug('listener: '+listener)
 	print 'ENTER THE PASSWORD FOR THE LISTENER EMAIL ID'
-	#passw=getpass.getpass()
+	passw=getpass.getpass()
 	#print passw
 
 	try:
 		smtpobj.login(listener,passw)
 		print 'ENTER THE TALKER EMAIL ADDRESS'
-		#talker=raw_input()
+		talker=raw_input()
 		logging.debug('talker: '+talker)
 		smtpobj.sendmail(listener,talker,'Subject:ALFRED AT YOUR SERVICE.\n')
 		print 'successfull login. Waiting for commands...'
@@ -185,6 +185,6 @@ try:
 
 except smtplib.SMTPAuthenticationError:
 		print 'incorrect login credentials'
-		logging.debug('listener logging failed trying again')
+		logging.debug('listener logging failed')
 
 
