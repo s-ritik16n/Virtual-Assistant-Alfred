@@ -1,40 +1,35 @@
-# Virtual-Assistant-Alfred-
-This is the mini Virtual Assistant (Named Alfred) For doing basic Tasks.
+# Alfred (Virtual-Assistant)
+This is a mini Virtual Assistant (named Alfred) for automating basic tasks.
 
-The Assistant is commanded via email and hence can be commanded from anywhere
+The Assistant is commanded via email, and hence, is independent of limitations of proximity.
 
-The tasks are:
+The current tasks are:
   1. Downloads Songs and Videos.
-    (Only made for educational purpose. The downloads are not sold or distributed)
-  2.Play Songs and Videos from your library
-    -finds the best match and plays the file,Or Queues it automatically
-  3. Set a display message that lasts for 10seconds
+    (_The downloaded content is not meant for commercial purpose_)
+  2. Play Songs and Videos from your library
+    (_finds the best match and plays the file, or Queues it automatically._)
+  3. Set a display message that lasts for 10 seconds.
   4. Set a reminder.
   
-Working on:
-  -setting up a multi user interface and multi assistant interface.
-  -Using Speech recognition for commands
-  
-Usage
-input the listener email id and password
-input the talker email address
+###Milestones:
+1. setting up a multi user interface and multi assistant interface.
+2. using Speech recognition for commands
+3. make the following folder on the host computer:
+ - d:/song_downloads
+ - d:/video_downloads
+ - d:/logs
+ - d:/reminders
+ - d:/display
 
-make the following folder on the host computer:(will try to accomodate this in the next update)
-1)d:/song_downloads
-2)d:/video_downloads
-3)d:/logs
-4)d:/reminders
-5)d:/display
+###Usage of Speech Recognition
+1. input the listener email id and password
+2. input the talker email address
+3. send commands from talker to listener of the form:
+ - download song `song name`
+ - download video `video name`
+ - reminder `title` `message`
+ - display `title` `message`
+ - quit
 
-
-
-send commands from talker to listener of the form:
-
-1)download song song name
-2)download video video name
-3)reminder title message
-4)display title message
-5)quit
-
-commands are separated by a new line character
+**Also**: commands are separated by a new line character
 
