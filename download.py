@@ -14,7 +14,7 @@ def count_file_type(direc,ext):
 	for i in os.listdir(direc):
 		if i.endswith(ext):
 			ctr=ctr+1
-		
+
 	return ctr
 
 def download(comm,listener,talker,list_pass):
@@ -61,7 +61,7 @@ def download(comm,listener,talker,list_pass):
 	res=browser.find_element_by_id('downloadq')
 	res.click()
 	while curr==count_file_type(direc,format):
-		time.sleep(5)	
+		time.sleep(5)
 	browser.quit()
 	lis=os.listdir(direc)
 	name=lis[0]
@@ -72,16 +72,7 @@ def download(comm,listener,talker,list_pass):
 	smtpobj.starttls()
 	smtpobj.login(listener,list_pass)
 	smtpobj.sendmail(listener,talker,'Subject:'+comm[1]+' download completed'+"""
-		
-		
+
+
 		"""+name)
 	smtpobj.quit()
-	
-	
-	
-	
-	
-	
-	
-	
-

@@ -88,16 +88,16 @@ def worker_threads():
 				smtpobj.ehlo()
 				smtpobj.starttls()
 				smtpobj.login(listener,list_pass)
-				smtpobj.sendmail(listener,talker,'Subject:I\'am afraid the ttask could not be completed.\n'+' '.join(comm))
+				smtpobj.sendmail(listener,talker,'Subject:I\'m afraid the task could not be completed.\n'+' '.join(comm))
 				smtpobj.quit()
 				inst_queue.task_done()
-			
-			
-		
-for i in range(2):		
+
+
+
+for i in range(2):
 	t1=Thread(target=worker_threads)
 	t1.start()
-		
+
 
 dt=datetime.datetime.now()
 strdt=dt.strftime('%d-%b-%Y')
@@ -167,7 +167,7 @@ while ch==0:
 				break;
 			else:
 				inst_queue.put([comm,listener,talker,passw,0])
-				
+
 			if ch==1:
 				inst_queue.join()
 				break;
@@ -179,12 +179,10 @@ try:
 	smtpobj.ehlo()
 	smtpobj.starttls()
 	smtpobj.login(listener,passw)
-	smtpobj.sendmail(listener,talker,'Subject:ALFRED OFFLINE. THANK YOU\n')		
+	smtpobj.sendmail(listener,talker,'Subject:ALFRED OFFLINE. THANK YOU\n')
 	imapobj.logout()
 	smtpobj.quit()
 
 except smtplib.SMTPAuthenticationError:
 		print 'incorrect login credentials'
 		logging.debug('listener logging failed')
-
-

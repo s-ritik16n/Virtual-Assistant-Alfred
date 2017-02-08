@@ -11,7 +11,7 @@ def compare(dict1,dict2):
 		distance+= dict1[k]*dict2.get(k,0)
 	distance=float(distance)/len(dict1)
 	return distance
-	
+
 
 def play(comm):
 	create_dict.update_lib()
@@ -35,7 +35,7 @@ def play(comm):
 				song.append(key)
 		if song[0]!='none':
 			file='d:\\song_downloads\\'+song[0]+'.mp3'
-			print file	
+			print file
 			Popen([app,file])
 		else:
 			print 'No such song found'
@@ -55,7 +55,7 @@ def play(comm):
 				video.append(key)
 		if video[0]!='none':
 			file='d:\\video_downloads\\'+video[0]+'.mp4'
-			print file	
+			print file
 			Popen([app,file])
 		else:
 			print 'No such video found'
@@ -63,7 +63,7 @@ def play(comm):
 #play(comm)
 #str1=raw_input('enter the string 1')
 #str2=raw_input('Enter the string 2')
-		
+
 #dict1=get_dict(str1)
 #dict2=get_dict(str2)
 
