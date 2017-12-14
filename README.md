@@ -11,7 +11,7 @@ The current tasks are:
   3. Set a display message that lasts for 10 seconds.
   4. Set a reminder.
   
-###Milestones:
+### Milestones:
 1. setting up a multi user interface and multi assistant interface.
 2. using Speech recognition for commands
 3. make the following folder on the host computer:
@@ -21,7 +21,7 @@ The current tasks are:
  - d:/reminders
  - d:/display
 
-###Usage of Speech Recognition
+### Usage of Speech Recognition
 1. input the listener email id and password
 2. input the talker email address
 3. send commands from talker to listener of the form:
